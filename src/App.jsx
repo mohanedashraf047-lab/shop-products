@@ -39,7 +39,7 @@ const App = () => {
     <CartProvider>
       {" "}
       {/* ✅ Wrap everything in CartProvider */}
-      <BrowserRouter>
+      <BrowserRouter />
         <Router>
           <ScrollToTop />
           <Navbar progressBarColor={randomColor} />
@@ -58,7 +58,6 @@ const App = () => {
           />
           <Footer />
         </Router>
-      </BrowserRouter>
     </CartProvider>
   );
 };
