@@ -23,11 +23,11 @@ const CartProvider = ({ children }) => {
       if (existing) {
         return prevItems.map((item) =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + product.quantity }
+            ? { ...item, quantity: item.quantity + (product.quantity || 1),}
             : item
         );
       } else {
-        return [...prevItems, { ...product }];
+        return [...prevItems, { ...product, quantity: product.quantity || 1}];
       }
     });
   };
